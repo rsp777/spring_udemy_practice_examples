@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here i.e dependency bean -->
+    <bean id="myFortuneService" 
+    		class="com.springtutorial.HappyFortuneService">
+    </bean>
+   
+   
+    <!-- Inject the dependencies -->
+    <bean id="myCoach" class="com.springtutorial.BaseballCoach">
+    	<constructor-arg ref="myFortuneService"/>  <!--Constructor Dependency injected -->  
+    </bean>
+	
+	
+	<bean id="myTrackCoach" class="com.springtutorial.TrackCoach">
+		<constructor-arg ref = "myFortuneService"/>
+    </bean>
+    
+    <bean id="myCricketCoach" class="com.springtutorial.CricketCoach">
+    	<!-- Setter Dependency Injected -->
+    	<property name="fortuneService" ref="myFortuneService"/>
+    </bean>
+    
+	
+</beans>
+
+
+
+
+
