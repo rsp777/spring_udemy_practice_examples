@@ -27,6 +27,8 @@
     <bean id="myCricketCoach" class="com.springtutorial.CricketCoach">
     	<!-- Setter Dependency Injected -->
     	<property name="fortuneService" ref="myFortuneService"/>
+    	<property name="emailAddress" value="ravindra008@gmail.com"/>
+    	<property name="team" value="Chennai Super Kings"/>
     </bean>
     
 	
