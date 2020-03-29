@@ -21,4 +21,10 @@ public class BaseballCoach implements Coach{
 		//use my fortune service to get a fortune. 
 		return fortuneService.getFortune();//helping out a coach by this helper class
 	}
+
+	@Override
+	public String getDailyFortunes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

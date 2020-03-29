@@ -20,5 +20,10 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
+	@Override
+	public String getDailyFortunes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
