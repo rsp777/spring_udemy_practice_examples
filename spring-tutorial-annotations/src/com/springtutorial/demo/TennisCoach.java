@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 ////@Component("myTennisCoach")
 public class TennisCoach implements Coach {
 	
+	@Autowired
 	private FortuneService fortuneService;
 	//define default constructor
 	public TennisCoach() {
@@ -20,11 +21,11 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated constructor stub
 	}*/
 	
-	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println("> Tennis Coach : Inside setFortuneService() method ");
-		fortuneService = theFortuneService;
-	}
+//	@Autowired
+//	public void setFortuneService(FortuneService theFortuneService) {
+//		System.out.println("> Tennis Coach : Inside setFortuneService() method ");
+//		fortuneService = theFortuneService;
+//	}
 
 	@Override
 	public String getDailyworkout() {
@@ -43,10 +44,10 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
-	@Autowired
-	public void doSomeCrazyStuff(FortuneService fortuneService) {
-		System.out.println("safsdfsdfsdfsdfsd");
-		this.fortuneService = fortuneService;
-	}
+//	@Autowired
+//	public void doSomeCrazyStuff(FortuneService fortuneService) {
+//		System.out.println("safsdfsdfsdfsdfsd");
+//		this.fortuneService = fortuneService;
+//	}
 
 }
