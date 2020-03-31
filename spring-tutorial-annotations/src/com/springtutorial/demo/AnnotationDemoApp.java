@@ -20,7 +20,7 @@ public class AnnotationDemoApp {
 //		System.out.println(myCoach.getFitness());
 		
 		System.out.println(theCoach.getDailyFortune());
-		
+//		System.out.println(theCoach.doSome);
 		//Close the context
 		context.close();
 	}

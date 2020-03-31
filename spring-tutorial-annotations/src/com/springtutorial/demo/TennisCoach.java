@@ -26,7 +26,6 @@ public class TennisCoach implements Coach {
 		fortuneService = theFortuneService;
 	}
 
-
 	@Override
 	public String getDailyworkout() {
 		// TODO Auto-generated method stub
@@ -43,6 +42,11 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
+	}
+	@Autowired
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println("safsdfsdfsdfsdfsd");
+		this.fortuneService = fortuneService;
 	}
 
 }
