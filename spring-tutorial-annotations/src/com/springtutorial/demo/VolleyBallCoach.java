@@ -7,7 +7,7 @@ public class VolleyBallCoach implements Coach{
 
 	@Override
 	public String getDailyworkout() {
-		// TODO Auto-generated method stub
+		
 		return "Practice with ball daily!";
 	}
 

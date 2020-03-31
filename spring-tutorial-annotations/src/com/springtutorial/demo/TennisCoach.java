@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 //Default Bean id
 @Component
 
-//@Component("myTennisCoach")
+////@Component("myTennisCoach")
 public class TennisCoach implements Coach {
 
 	@Override
