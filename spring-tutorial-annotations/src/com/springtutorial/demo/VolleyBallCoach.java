@@ -16,6 +16,12 @@ public class VolleyBallCoach implements Coach{
 		// TODO Auto-generated method stub
 		return "Volley ball Coach is not fit for players.";
 	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
