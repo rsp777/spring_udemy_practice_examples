@@ -1,6 +1,7 @@
 package com.springtutorial.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //Default Bean id
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	
 	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	//define default constructor
 	public TennisCoach() {
