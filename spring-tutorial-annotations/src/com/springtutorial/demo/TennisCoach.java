@@ -1,12 +1,16 @@
 package com.springtutorial.demo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //Default Bean id
 @Component
-
+//@Scope("prototype")
 ////@Component("myTennisCoach")
 public class TennisCoach implements Coach {
 	
@@ -28,7 +32,16 @@ public class TennisCoach implements Coach {
 //		System.out.println("> Tennis Coach : Inside setFortuneService() method ");
 //		fortuneService = theFortuneService;
 //	}
-
+	
+	/*@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println("Starting UP.....");
+	}
+	
+	*/@PreDestroy
+	public void doMyCleanStuff() {
+		System.out.println("Cleaning UP.....");
+	}
 	@Override
 	public String getDailyworkout() {
 		// TODO Auto-generated method stub
