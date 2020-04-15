@@ -15,6 +15,7 @@
     </bean>
    
    
+   
     <!-- Inject the dependencies -->
     <bean id="myCoach" class="com.springtutorial.BaseballCoach">
     	<constructor-arg ref="myFortuneService"/>  <!--Constructor Dependency injected -->  
