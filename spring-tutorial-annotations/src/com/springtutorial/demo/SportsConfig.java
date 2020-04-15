@@ -16,10 +16,20 @@ public class SportsConfig {
 		return new LuckyFortuneService();
 	}
 	
+	@Bean
+	public FortuneService delightedFortuneService() {
+		return new DelightedFortuneService();
+	}
+	
 	//define bean for our swim Coach and inject dependency
 	@Bean
 	public Coach swimCoach() {
 		return new SwimCoach(luckyFortuneService());
+	}
+	
+	@Bean
+	public Coach archeryCoach() {
+		return new ArcheryCoach(delightedFortuneService());
 	}
 	
 	//
