@@ -18,39 +18,39 @@ public class InstructorServiceImpl implements InstructorService {
 	@Autowired 
 	private InstructorDAO instructorDAO;
 	
-	@Override
+//	@Override
 	@Transactional
 	public List<Instructor> getInstructors() {
 		// TODO Auto-generated method stub
 		return instructorDAO.getInstructors();
 	}
  
-	@Override
+//	@Override
 	@Transactional
 	public void addInstructor(Instructor theInstructor,InstructorDetail instructorDetails,Course course,Review review) {
 		instructorDAO.addInstructor(theInstructor,instructorDetails,course,review);
 		
 	}
 
-	@Override
+//	@Override
 	@Transactional
 	public void delete(int id) {
 		instructorDAO.delete(id);		
 	}
 
-	@Override
+//	@Override
 	@Transactional
 	public List<Instructor> searchInstructor(String search_id_name) {
 		return instructorDAO.searchInstructor(search_id_name);
 	}
 
-	@Override
+//	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+//	@Override
 	@Transactional
 	public Instructor getInstructor(int id) {
 		return instructorDAO.getInstructor(id);

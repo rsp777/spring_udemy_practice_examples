@@ -20,7 +20,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 	private SessionFactory sessionFactory;
 
 	@SuppressWarnings("unchecked")
-	@Override
+//	@Override
 	public List<Instructor> getInstructors() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query<Instructor> theQuery = currentSession.createQuery("from Instructor");
@@ -32,7 +32,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		return instructors;
 	}
 	@SuppressWarnings("unchecked")
-	@Override
+	
 	public Instructor getInstructor(int id) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query<Instructor> theQuery = (Query<Instructor>) currentSession.createQuery("from Instructor where id=:theId");
@@ -42,7 +42,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		return theInstructor;
 	}
 	@SuppressWarnings("unchecked")
-	@Override
+	
 	public void addInstructor(Instructor theInstructor, InstructorDetail instructorDetails,Course tempCourse,Review tempReview) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query<Instructor> query0 = currentSession.createNativeQuery("SET FOREIGN_KEY_CHECKS = 1");
@@ -61,7 +61,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 	}
  
 	@SuppressWarnings({ "rawtypes", "unchecked" }) 
-	@Override
+	
 	public List<Instructor> searchInstructor(String search_name) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query theQuery = null;
@@ -80,7 +80,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		return instructors;
 	}
 	@SuppressWarnings("unchecked")
-	@Override
+	
 	public void delete(int id) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query<Instructor> query0 = currentSession.createNativeQuery("SET FOREIGN_KEY_CHECKS = 0");
@@ -95,6 +95,11 @@ public class InstructorDAOImpl implements InstructorDAO{
 //		// TODO Auto-generated method stub
 //		
 //	}
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 	
 
