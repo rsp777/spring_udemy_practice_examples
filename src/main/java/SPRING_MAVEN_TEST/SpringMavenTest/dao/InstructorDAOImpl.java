@@ -60,7 +60,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		System.out.println("record added to database");
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes", "unchecked" }) 
 	@Override
 	public List<Instructor> searchInstructor(String search_name) {
 		Session currentSession = sessionFactory.getCurrentSession();
@@ -90,11 +90,11 @@ public class InstructorDAOImpl implements InstructorDAO{
 		query.setParameter("instructorId", id);
 		query.executeUpdate();
 	}
-	@Override
-	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void deleteAll() {
+//		// TODO Auto-generated method stub
+//		
+//	}
 	
 	
 
