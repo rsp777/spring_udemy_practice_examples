@@ -54,7 +54,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		theInstructor = getInstructor(id);
 		tempCourse.add(tempReview);
 		System.out.println("Course without review : "+tempCourse);
-		currentSession.saveOrUpdate(tempCourse);
+		currentSession.saveOrUpdate(tempCourse); 
 		System.out.println("After course : "+theInstructor);
 		System.out.println("Course with review : "+tempCourse);
 		System.out.println("record added to database");
