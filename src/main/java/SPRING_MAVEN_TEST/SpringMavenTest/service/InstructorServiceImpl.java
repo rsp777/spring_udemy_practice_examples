@@ -24,7 +24,7 @@ public class InstructorServiceImpl implements InstructorService {
 		// TODO Auto-generated method stub
 		return instructorDAO.getInstructors();
 	}
-
+ 
 	@Override
 	@Transactional
 	public void addInstructor(Instructor theInstructor,InstructorDetail instructorDetails,Course course,Review review) {

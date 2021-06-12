@@ -9,7 +9,7 @@ import SPRING_MAVEN_TEST.SpringMavenTest.entity.Review;
 
 public interface InstructorDAO {
 
-	public List<Instructor> getInstructors();
+	public List<Instructor> getInstructors();  
 
 	public void addInstructor(Instructor theInstructor, InstructorDetail instructorDetails,Course course, Review review);
 

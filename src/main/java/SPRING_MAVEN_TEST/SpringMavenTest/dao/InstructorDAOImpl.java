@@ -59,7 +59,7 @@ public class InstructorDAOImpl implements InstructorDAO{
 		System.out.println("Course with review : "+tempCourse);
 		System.out.println("record added to database");
 	}
-
+ 
 	@SuppressWarnings({ "rawtypes", "unchecked" }) 
 	@Override
 	public List<Instructor> searchInstructor(String search_name) {

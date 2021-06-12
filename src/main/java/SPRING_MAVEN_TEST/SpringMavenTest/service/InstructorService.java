@@ -8,7 +8,7 @@ import SPRING_MAVEN_TEST.SpringMavenTest.entity.InstructorDetail;
 import SPRING_MAVEN_TEST.SpringMavenTest.entity.Review;
 
 public interface InstructorService {
-
+ 
 	public List<Instructor> getInstructors();
 
 	public void addInstructor(Instructor theInstructor, InstructorDetail instructorDetails,Course course, Review review);
