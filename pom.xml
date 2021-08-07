@@ -103,7 +103,7 @@
 		</repository>
 	</repositories>
 	
-	<!-- <build>
+	 <build>
 		<finalName>SpringMavenTest</finalName>
 		<plugins>
 			<plugin>
@@ -115,6 +115,17 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+			 <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.1.0.Beta1</version>
+<configuration>
+   <hostname>192.168.29.56</hostname>
+   <port>9990</port>
+   <username>pawar</username>
+   <password>pawar</password>
+</configuration>
+            </plugin>
 		</plugins>
-	</build> -->
+	</build> 
 </project>
